@@ -8,13 +8,13 @@
 <body>
     <p class="super_element">Привет</p>
 
-<!-- <img src="https://placeimg.com/50/50/animals" alt="">
+<img src="https://placeimg.com/50/50/animals" alt="">
 <img src="https://placeimg.com/50/50/arch" alt="">
 <img src="https://placeimg.com/50/50/nature" alt="">
 <img src="https://placeimg.com/50/50/people" alt="">
 <img src="https://placeimg.com/50/50/tech" alt="">
 <img src="https://placeimg.com/50/50/tech/grayscale" alt="">
-<img src="https://placeimg.com/50/50/tech/sepia" alt=""> -->
+<img src="https://placeimg.com/50/50/tech/sepia" alt="">
 
 <br>
 
@@ -64,6 +64,16 @@ window.addEventListener('load', function () {
 // - у элемента, а также выводить в нижнем регистре верный тег в данной строке, по
 // - которому был совершен клик.
 // - Необходимо использовать делегирование.
+
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('super_element')) {
+        console.log(`Класс "super_element" присутствует в элементе "${e.target.tagName.toLowerCase()}"`);
+    } else {
+
+        console.log(`Класс "super_element" отсутствует в элементе "${e.target.tagName.toLowerCase()}"`);
+    }
+
+});
 
 // 4. Сделайте, чтобы при наведении на textarea в консоли появлялось сообщение: "Вы навели на textarea."
 
