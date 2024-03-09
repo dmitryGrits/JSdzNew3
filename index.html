@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style></style>
 </head>
 <body>
     <p class="super_element">Привет</p>
@@ -97,7 +98,16 @@ ulElements.addEventListener('click', function(e) {
 });
 // 6. Вопрос: Почему в console.log пишется сначала текст из 5 задания и только потом выводится текст из 3 задания, если мы кликаем по кнопкам в ul? Ответ необходимо написать здесь же, под этим комментарием, своими словами.
 
+//Потому что мы обращаемся к элементам ul и это происходит быстрее чем обращение к document
+
 // 7. С помощью JS необходимо изменить цвет заднего фона каждого второго тега li.
+
+
+const liElements = ulElements.querySelectorAll('li');
+for (let i = 1; i < liElements.length; i+=2) {
+    liElements[i].style.background = 'blue';
+};
+
 
 </script>
 </body>
